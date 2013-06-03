@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+#aegis credentials of user:users required with <request context="INSTALL">
+
+# Making sure /home/user/.config/maefi/ exists
+mkdir -p /home/user/.config/maefi/
+mkdir -p /home/user/.config/maefi/var/log
+mkdir -p /home/user/.config/maefi/var/run
+
+# Setup the directory for the Eye-Fi Picture Uploads
+mkdir -p /home/user/MyDocs/maefipics
+
+# copy what we need
+cp /opt/maefi/.maefi/eyefiserver /home/user/.config/maefi/
+cp /opt/maefi/.maefi/eyefiserver.conf /home/user/.config/maefi/
+cp /opt/maefi/.maefi/eyefiserver.py /home/user/.config/maefi/
+cp /opt/maefi/.maefi/var/log/eyefiserver.log /home/user/.config/maefi/var/log/
+#cp /opt/maefi/.maefi/var/run/eyefiserver.pid /home/user/.config/maefi/var/run/
+cp /opt/maefi/.maefi/server_status.sh /home/user/.config/maefi/
+#cp /opt/maefi/.maefi/change_key.sh /home/user/.config/maefi/
+
+chown -R user:users /home/user/.config/maefi
