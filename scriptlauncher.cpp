@@ -1,4 +1,7 @@
 #include "scriptlauncher.h"
+#include <fstream>
+#include <string.h>
+#include <iostream>
 
 ScriptLauncher::ScriptLauncher(QObject *parent) :
     QObject(parent),
@@ -40,16 +43,25 @@ QString ScriptLauncher::serverStatus()
 
 }
 
-void ScriptLauncher::changeKey()
+void ScriptLauncher::updateKey(QString newkey)
 {
-    m_process->execute("sh /home/user/.config/maefi/change_key.sh");
-    //m_process->start("sh");
-    //m_process->write("/home/user/.config/maefi/change_key.sh");
-    //m_process->waitForFinished();
-    //QByteArray output = m_process->readAll();
-    //m_process->close();
+    m_process->execute("sh /home/user/.config/maefi/change_key.sh "+newkey);
+    m_process->waitForFinished(-1);
+    QString p_stdout = m_process->readAllStandardOutput();
 
 }
 
+QString ScriptLauncher::currentKey()
+{
+    m_process->execute("sh /home/user/.config/maefi/change_key.sh false");
+    std::ifstream stream("/home/user/.config/maefi/newkey.txt");
+    std::string Line;
+    std::getline(stream, Line);
+    std::string key = Line.substr (11);
+    QString qstr = QString::fromStdString(key);
+
+    return qstr;
+
+}
 
 

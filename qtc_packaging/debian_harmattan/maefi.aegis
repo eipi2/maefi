@@ -13,4 +13,9 @@
       <credential name="GID::users" />
       <for path="/home/user/.config/maefi/change_key.sh"/>
   </request>
-</aegis>
+  <request>
+      <credential name="UID::user" />
+      <credential name="GID::users" />
+      <for path="/home/user/.config/maefi/update_key.py"/>
+  </request>
+ </aegis>

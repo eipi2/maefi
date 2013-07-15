@@ -9,8 +9,7 @@ QT += declarative
 
 SOURCES += $$PWD/qmlapplicationviewer.cpp
 HEADERS += $$PWD/qmlapplicationviewer.h \
-    qmlapplicationviewer/scriptlauncher.h \
-    qmlapplicationviewer/config.h
+    qmlapplicationviewer/scriptlauncher.h
 INCLUDEPATH += $$PWD
 
 # Include JS debugger library if QMLJSDEBUGGER_PATH is set
@@ -146,5 +145,6 @@ export (TARGET.CAPABILITY)
 export (LIBS)
 export (QMAKE_EXTRA_TARGETS)
 }
+
 
 

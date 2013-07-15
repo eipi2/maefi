@@ -1,7 +1,12 @@
 /**********************************************************************
- * Copyright 2012 Sanjeev Visvanatha
+ * Copyright 2013 Sanjeev Visvanatha
  *
  * This file is part of Mae-Fi.
+ *
+ * Mae-Fi is a Simple Eye-Fi Application for Nokia's MeeGo Harmattan
+ *
+ * Mae-Fi makes use of the eyefiserver python script created by
+ * Jeff Tchang (http://code.google.com/p/eyefiserver/).
  *
  * Mae-Fi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,8 +26,8 @@ import QtQuick 1.1
 import com.nokia.meego 1.0
 
 QueryDialog {
-    titleText: "Mae-Fi v1.0.0"
-    message: "Copyright Sanjeev Visvanatha 2013\n\n" + "Mae-Fi is a simple Eye-Fi application for Nokia Harmattan\n\n" + "This application is free sofware licenced under the GNU Public License version 2\n\n" + "see http://www.gnu.org/licenses/"
+    titleText: "Mae-Fi v1.1.0"
+    message: "Copyright Sanjeev Visvanatha 2013\n\n" + "Mae-Fi is a simple Eye-Fi application for Nokia Harmattan\n\n" + "Mae-Fi makes use of the eyefiserver python script created by Jeff Tchang http://code.google.com/p/eyefiserver/\n\n" + "This application is free sofware licenced under the GNU Public License version 2\n\n" + "see http://www.gnu.org/licenses/"
     acceptButtonText: "Close"
 
 }

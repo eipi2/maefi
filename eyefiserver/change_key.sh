@@ -1,6 +1,4 @@
 #!/usr/bin/sh
-
-#cp eyefiserver.conf backup.conf
-#sed '17s/upload_key:0ecc26b65081c92f4eafcde1a8f5e74f/upload_key:userinput/' eyefiserver.conf > new_eyefiserver.conf
-#mv new_eyefiserver.conf eyefiserver.conf
-
+key=$(/usr/bin/python /home/user/.config/maefi/update_key.py /home/user/.config/maefi/eyefiserver.conf $1)
+echo -n $key > /home/user/.config/maefi/newkey.txt
+exit 0

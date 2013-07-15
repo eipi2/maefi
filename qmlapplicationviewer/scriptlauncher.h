@@ -16,11 +16,11 @@ public:
     Q_INVOKABLE void launchHotspot();
     Q_INVOKABLE void launchGallery();
     Q_INVOKABLE QString serverStatus();
-    Q_INVOKABLE void changeKey();
+    Q_INVOKABLE void updateKey(QString newkey);
+    Q_INVOKABLE QString currentKey();
 
 private:
     QProcess *m_process;
-    QProcess *p_process;
 };
 
 #endif

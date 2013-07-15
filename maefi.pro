@@ -38,8 +38,7 @@ CONFIG += qdeclarative-boostable
 
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp \
-    scriptlauncher.cpp \
-    config.cpp
+    scriptlauncher.cpp
 
 # Please do not modify the following two lines. Required for deployment.
 include(qmlapplicationviewer/qmlapplicationviewer.pri)
@@ -60,7 +59,10 @@ OTHER_FILES += \
     eyefiserver/var/run/eyefiserver.pid \
     qtc_packaging/debian_harmattan/maefi.aegis \
     eyefiserver/server_status.sh \
-    eyefiserver/change_key.sh
+    eyefiserver/change_key.sh \
+    eyefiserver/update_key.py
+
+
 
 
 
