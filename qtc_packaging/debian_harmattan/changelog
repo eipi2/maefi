@@ -1,0 +1,10 @@
+maefi (1.1.0) unstable; urgency=low
+  * <Settings page added to modify/view Upload Key>
+
+ -- Sanjeev Visvanatha <mobiletabletsblog@gmail.com>  Sun, 14 Jul 2013 20:46:33 -0400
+
+maefi (1.0.0) unstable; urgency=low
+  * <Initial Release.  Settings page not completed.>
+
+ -- Sanjeev Visvanatha <mobiletabletsblog@gmail.com>  Thu, 01 Nov 2012 21:13:20 -0400
+

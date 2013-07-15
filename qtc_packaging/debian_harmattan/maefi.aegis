@@ -1,0 +1,21 @@
+<aegis>
+  <request context="INSTALL">
+    <credential name="UID::user" />
+    <credential name="GID::users" />
+  </request>
+  <request>
+      <credential name="UID::user" />
+      <credential name="GID::users" />
+      <for path="/home/user/.config/maefi/eyefiserver"/>
+  </request>
+  <request>
+      <credential name="UID::user" />
+      <credential name="GID::users" />
+      <for path="/home/user/.config/maefi/change_key.sh"/>
+  </request>
+  <request>
+      <credential name="UID::user" />
+      <credential name="GID::users" />
+      <for path="/home/user/.config/maefi/update_key.py"/>
+  </request>
+ </aegis>
